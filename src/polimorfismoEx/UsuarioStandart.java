@@ -1,10 +1,9 @@
-package polimorfismo;
+package polimorfismoEx;
 
-public class UsuarioPremium implements Usuario{
-
+public class UsuarioStandart implements Usuario{
     public Double getValorDesconto(double valorProduto) {
         if (valorProduto > 200){
-            Double valorDesconto = valorProduto * 0.30;
+            Double valorDesconto = valorProduto * 0.15;
             return valorDesconto;
         }else{
             return null;
@@ -13,14 +12,14 @@ public class UsuarioPremium implements Usuario{
 
     @Override
     public String getTipoUsuario() {
-        return "Usuario Premium";
+        return "Usuario Standart";
     }
 
     @Override
     public String getValorFreteDesconto(double valorFrete, double valorProduto) {
-        if(valorProduto > 100){
-
-            return "O frete é gratis";
+        if(valorProduto > 200){
+            Double valorFreteDesconto = valorFrete * 0.10;
+            return "O desconto do frete é" + valorFreteDesconto;
         }else {
             return "Não possuí desconto";
         }

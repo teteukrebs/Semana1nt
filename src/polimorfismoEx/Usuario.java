@@ -1,4 +1,4 @@
-package polimorfismo;
+package polimorfismoEx;
 
 public interface Usuario {
     Double getValorDesconto(double valorProduto);
